@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS Learn</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" href="../../img/JS-logo.png" type="image/png">
+</head>
+
+<body>
+    <div id="menu">
+        <a href="learn/index.html">Learn</a>
+        <a href="about.html">About</a>
+        <img id="switchLanguage" src="../../img/SLRussia.png">
+    </div>
+    <header>
+        <h1>Introduction. innerHTML. button</h1>
+    </header>
+
+    <main>
+        <p>Hello! Welcome to first lesson of JavaScript. let's talk about JavaScript.</p>
+        <p>The first thing I wanted to say is that JavaScript &#8800; Java. Many confuse these two languages and they don't see the difference between them. This is what Java looks like:</p>
+        <pre class="code">
+            <code class="code">
+    <span class="keyword">class </span><span class="title">HelloWorld</span>{
+            <span class="keyword">public static void </span> <span class="title">main</span> <span class="args">(String args [])</span> {
+            <span class="keyword">System</span>.<span class="keyword">out</span>.<span class="title">println</span>(<span class="text">"Hello World"</span>);
+            } 
+        }
+</code>
+        </pre>
+        <p>JavaScript looks like:</p>
+        <pre class="code">
+    <code class="code">
+    <span class="keyword">&#60;script&#62;</span>
+        <span class="keyword">alert</span>(<span class="text">"Hello World!"</span>);
+    <span class="keyword">&#60;/script&#62;</span>
+    </code>
+        </pre>
+        <p>Secondly: JavaScript - implementation of the ECMAScript standard.</p>
+        <p>Now we pass to where we will write Javascript. Our development environment will be the place where we wrote HTML. I work in <a href="http://brackets.io/">Brackets</a>. Let's code!</p>
+        <p>Where We must write our code? In HTML. Set tag &#60;script&#62; before &#60;/body>. Like here:</p>
+        <pre class="code">
+<code class="code">
+<span>&#60;!DOCTYPE html></span>
+<span>&#60;html lang="en"></span>
+    <span>&#60;head></span>
+        <span>&#60;meta charset="UTF-8"></span>
+        <span>&#60;title>JS Learn&#60;/title></span>
+        <span>&#60;link rel="stylesheet" href="style.css"></span>
+    <span>&#60;/head></span>
+    <span>&#60;body></span>
+        <span> &#60;p>JS - cool!&#60;/p></span>
+    <span class="attention">&#60;script&#62;&#60;/script&#62;</span>
+    <span>&#60;/body></span>
+<span>&#60;/html&#62;</span>
+</code>
+        </pre>
+        <p>You can write js in HTML or in file. But you must write this tag like that:</p>
+        <pre class="code">
+<code class="code">
+<span>&#60;!DOCTYPE html></span>
+<span>&#60;html lang="en"></span>
+    <span>&#60;head></span>
+        <span>&#60;meta charset="UTF-8"></span>
+        <span>&#60;title>JS Learn&#60;/title></span>
+        <span>&#60;link rel="stylesheet" href="style.css"></span>
+    <span>&#60;/head></span>
+    <span>&#60;body></span>
+        <span> &#60;p>JS - cool!&#60;/p></span>
+    <span class="attention">&#60;script src="name_of_JSscript.js"&#62;&#60;/script&#62;</span>
+    <span>&#60;/body></span>
+<span>&#60;/html&#62;</span>
+</code>
+        </pre>
+        <p class="attention">In order for us to connect modern JS (on which we will work) we need to write at the beginning of each script <span class="keyword">"use strict";</span></p>
+        <p>And then the script will connect from the file. Lets make your first program on JS. The first thing JS can do is change the HTML code. How do we do this? Very easy. We must use .innerHTML. For example:</p>
+<pre class="code">
+<code class="code">
+<span class="keyword">&#60;script&#62;</span>
+    <span class="keyword">"use strict";</span>
+    <span class="elem">elem</span>.<span class="keyword">innerHTML</span> = <span class="text">"someText"</span>;
+<span class="keyword">&#60;/script&#62;</span>
+</code>
+        </pre>
+        <p>In this code we change inner HTML code of element <span class="elem">elem</span>. How element <span class="elem">elem</span> now looks like this:</p>
+        <pre class="code">
+<code class="code">
+&#60;p <span class="keyword">id</span>=<span class="text">"elem"</span>&#62;someText&#60;/p&#62;
+</code>
+        </pre>
+        <p>elem - it is id of HTML tag. In JS we always use id, we can't use classes! There is ful code(HTML + JS):</p>
+        <pre class="code">
+<code class="code">
+<span>&#60;!DOCTYPE html></span>
+<span class="keyword">&#60;html lang=<span class="text">"en"</span>></span>
+    <span class="keyword">&#60;head></span>
+        <span class="keyword">&#60;meta charset=<span class="text">"UTF-8"</span>></span>
+        <span class="keyword">&#60;title><span class="title">JS Learn</span>&#60;/title></span>
+    <span class="keyword">&#60;/head></span>
+    <span class="keyword">&#60;body></span>
+        <span class="keyword">&#60;p id=<span class="text">"elem"</span>&#62;<span class="title">JS - cool!</span>&#60;/p></span>
+    <span class="keyword">&#60;script&#62;</span>
+        <span class="keyword">"use strict";</span>
+        <span class="elem">elem</span>.<span class="keyword">innerHTML</span> = <span class="text">"someText"</span>;
+    <span class="keyword">&#60;/script&#62;</span>
+    <span class="keyword">&#60;/body></span>
+<span class="keyword">&#60;/html&#62;</span>
+</code>
+        </pre>
+        <p>Ok, we see in our page someText. But we don't see previous text. We can not only replace, but also add elements. We can write <span class="elem">elem</span>.<span class="keyword">innerHTML</span> = <span class="elem">elem</span>.<span class="keyword">innerHTML</span> + <span class="text">"someText"</span>; or <span class="elem">elem</span>.<span class="keyword">innerHTML</span> += <span class="text">"someText"</span>;((a = a + b) == (a += b))</p>
+        <pre class="code">
+<code class="code">
+<span>&#60;!DOCTYPE html></span>
+<span class="keyword">&#60;html lang=<span class="text">"en"</span>></span>
+    <span class="keyword">&#60;head></span>
+        <span class="keyword">&#60;meta charset=<span class="text">"UTF-8"</span>></span>
+        <span class="keyword">&#60;title><span class="title">JS Learn</span>&#60;/title></span>
+    <span class="keyword">&#60;/head></span>
+    <span class="keyword">&#60;body></span>
+        <span class="keyword">&#60;p id=<span class="text">"elem"</span>&#62;<span class="title">JS - cool!</span>&#60;/p></span>
+    <span class="keyword">&#60;script&#62;</span>
+        <span class="keyword">"use strict";</span>
+        <span class="elem">elem</span>.<span class="keyword">innerHTML</span> += <span class="text">" someText"</span>;
+    <span class="keyword">&#60;/script&#62;</span>
+    <span class="keyword">&#60;/body></span>
+<span class="keyword">&#60;/html&#62;</span>
+</code>
+        </pre>
+        <p>result of First example(<span class="elem">elem</span>.<span class="keyword">innerHTML</span> = <span class="text">"someText"</span>): someText</p>
+        <p>result of Second example(<span class="elem">elem</span>.<span class="keyword">innerHTML</span> += <span class="text">" someText"</span>;): JS-cool! someText</p>
+        <p>Let's add interactive. Now we must add button by tag <span class="attention">&#60;button>&#60;/button></span>. Let the id of this button be btn. And text will be - click. So, our button is  
+        <span class="keyword">&#60;button id=<span class="text">"btn"</span>><span class="title">click</span>&#60;/button></span>. Let's add our button to our page.</p>
+        <pre class="code">
+<code class="code">
+<span>&#60;!DOCTYPE html></span>
+<span class="keyword">&#60;html lang=<span class="text">"en"</span>></span>
+    <span class="keyword">&#60;head></span>
+        <span class="keyword">&#60;meta charset=<span class="text">"UTF-8"</span>></span>
+        <span class="keyword">&#60;title><span class="title">JS Learn</span>&#60;/title></span>
+    <span class="keyword">&#60;/head></span>
+    <span class="keyword">&#60;body></span>
+        <span class="keyword">&#60;button id=<span class="text">"btn"</span>&#62;<span class="title">click</span>&#60;/p></span>
+        <span class="keyword">&#60;p id=<span class="text">"elem"</span>&#62;<span class="title">JS - cool!</span>&#60;/p></span>
+    <span class="keyword">&#60;script&#62;</span>
+        <span class="keyword">"use strict";</span>
+        <span class="elem">elem</span>.<span class="keyword">innerHTML</span> += <span class="text">" someText"</span>;
+    <span class="keyword">&#60;/script&#62;</span>
+    <span class="keyword">&#60;/body></span>
+<span class="keyword">&#60;/html&#62;</span>
+</code>
+        </pre>
+        <p>Now we need script for our button. We can add the event listener on the button. <span class="attention">btn.addEventListener("click", function(){//some_code});</span> - add event listener on our button.For example: I want to make a clicker. I need one variable, button and text. To declare a variable, use - let. All variables in JS are dynamically typed. Let's write simple clicker</p>
+        <pre class="code">
+<code class="code">
+<span>&#60;!DOCTYPE html></span>
+<span class="keyword">&#60;html lang=<span class="text">"en"</span>></span>
+    <span class="keyword">&#60;head></span>
+        <span class="keyword">&#60;meta charset=<span class="text">"UTF-8"</span>></span>
+        <span class="keyword">&#60;title><span class="title">JS Learn</span>&#60;/title></span>
+    <span class="keyword">&#60;/head></span>
+    <span class="keyword">&#60;body></span>
+        <span class="keyword">&#60;button id=<span class="text">"btn"</span>&#62;<span class="title">click</span>&#60;/button></span>
+        <span class="keyword">&#60;p id=<span class="text">"elem"</span>&#62;<span class="title">JS - cool!</span>&#60;/p></span>
+        
+    <span class="keyword">&#60;script&#62;</span>
+        <span class="keyword">"use strict";</span>
+        <span class="keyword">let</span> <span class="title">clickCount</span> = 0;<span class="com">//Declare a variable</span>
+        <span class="elem">btn</span>.<span class="keyword">addEventListener(<span class="text">"click"</span>, function(){<span class="com">//Add Click listener</span>
+            <span class="title">clickCount++;</span><span class="com">//clickCount += 1</span>
+            <span class="elem">elem</span>.<span class="keyword">innerHTML</span> = <span class="text">clickCount</span>;<span class="com">//update information</span>
+        });</span>
+    <span class="keyword">&#60;/script&#62;</span>
+    
+    <span class="keyword">&#60;/body></span>
+<span class="keyword">&#60;/html&#62;</span>
+</code>
+        </pre>
+        <p>Also you can add event listener to other tags(div, p, etc.). for example: <span class="attention">divId.addEventListener("click", function(){});</span></p>
+        <p>Congrats! Now you create a web-clicker! You can style your game, and make her more interesting!</p>
+    </main>
+
+    <footer><a href="https://informatics.ru/">Glazyrin Artem</a> <a href="https://informatics.ru/"><img src="../../img/Logo.svg"></a></footer>
+
+    <script src="script.js">    </script>
+</body>
+
+</html>
