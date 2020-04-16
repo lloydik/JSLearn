@@ -1,7 +1,7 @@
- 'use strict';
-        let headerRu = ['<h1>Введение. .innerHTML. Кнопка</h1>'];
-        let headerEn = ['<h1>Introduction. innerHTML. button</h1>'];
-        let mainRu = [
+'use strict';
+let headerRu = ['<h1>Введение. .innerHTML. Кнопка</h1>'];
+let headerEn = ['<h1>Introduction. innerHTML. button</h1>'];
+let mainRu = [
             `<p>Привет! Добро пожаловать на первый урок по JavaScript. Давай сначала поговорим о самом языке.</p>   <p>Первое что яхотел сказать: JavaScript &#8800; Java. Многие путают эти два языка и они не видят разницы между этими языками. Java выглядит так:</p><pre class="code">
             <code class="code">
     <span class="keyword">class </span><span class="title">HelloWorld</span>{
@@ -155,8 +155,7 @@
         </pre>
         <p>Также такую прослушку можно ставить на разные теги(div p и т.д.). Например: <span class="attention">divId.addEventListener("click" function(){});</span></p> <p>Поздравляю! Теперь ты можешь создавать веб-кликер! Ты можешь стилизировать игру и сделать более интересной!</p>`
         ];
-
-        let mainEn = [
+let mainEn = [
 `<p>Hello! Welcome to first lesson of JavaScript. lets talk about JavaScript.</p> <p>The first thing I wanted to say is that JavaScript &#8800; Java. Many confuse these two languages and they dont see the difference between them. This is what Java looks like:</p>
         <pre class="code">
 <code class="code">
@@ -313,35 +312,36 @@
         <p>Also you can add event listener to other tags(div p etc.). for example: <span class="attention">divId.addEventListener("click" function(){});</span></p>
         <p>Congrats! Now you create a web-clicker! You can style your game and make her more interesting!</p>`
         ];
-        let menuEn = ["Learn", "About", ""];
-        let menuRu = ["Изучить", "О проекте", ""];
-        let footerRu = ["Глазырин Артём", "<a href=https://informatics.ru/><img src=../../img/Logo.svg></a>"];
-        let footerEn = ["Glazyrin Artem", "<a href=https://informatics.ru/><img src=../../img/Logo.svg></a>"];
-        let olRu = [];
-        let olEn = [];
+let menuEn = ["<a href='../index.html'>Learn</a><a href='../../about.html'>About</a> <img id='switchLanguage' src='../../img/SLRussia.png'>"];
+let menuRu = ["<a href='../index.html'>Изучить</a><a href='../../about.html'>О проекте</a><img id='switchLanguage' src='../../img/SLRussia.png'>"];
+let footerRu = ['<a href="https://informatics.ru/">Глазырин Артём</a> <a href="https://informatics.ru/"><img src="../../img/Logo.svg"></a>'];
+let footerEn = ['<a href="https://informatics.ru/">Glazyrin Artem</a> <a href="https://informatics.ru/"><img src="../../img/Logo.svg"></a>'];
 
+let RuPage = [menuRu, headerRu, mainRu, footerRu];
+let EnPage = [menuEn, headerEn, mainEn, footerEn];
 
-        let RuPage = [menuRu, headerRu, mainRu, footerRu];
-        let EnPage = [menuEn, headerEn, mainEn, footerEn];
-        let en = true;
+let en = false;
+let array = document.body.children;
+let count1 = array.length-1;
 
-        function setContent() {
-            let array = document.body.children;
-            let count1 = array.length;
-            if (en) {
-                for (let i = 1; i < count1; i++) {
-                        array[i].innerHTML = RuPage[i];
-                }
-                switchLanguage.setAttribute("src", "../../img/SLEnglish.jpg");
-            } else {
-                for (let i = 1; i < count1; i++) {
-                        array[i].innerHTML = EnPage[i];
-                }
-                switchLanguage.setAttribute("src", "../../img/SLRussia.png");
-            }
-            en = !en;
+function setContent() {
+    console.log(array);
+    if (en) {
+        for (let i = 0; i < count1; i++) {
+                array[i].innerHTML = RuPage[i];
         }
-        
-        switchLanguage.addEventListener("click", function() {
-            setContent();
-        });
+        switchLanguage.setAttribute("src", "../../img/SLEnglish.jpg");
+    } else {
+        for (let i = 0; i < count1; i++) {
+                array[i].innerHTML = EnPage[i];
+        }
+        switchLanguage.setAttribute("src", "../../img/SLRussia.png");
+    }
+    document.querySelector('#menu > #switchLanguage').addEventListener('click', function() {
+    setContent();
+    });
+    en = !en;
+    return;
+}
+
+setContent();
