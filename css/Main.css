@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Oxygen&display=swap');
 header{
-    width: 100%;
-    height: 100vh;
+        width: 100%;
+        height: 100vh;
     background-image: url(../img/background.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -12,7 +12,6 @@ header{
     justify-content: center;
     vertical-align: middle;
     align-items: center;
-    font-size: 72px;
 }
 .logo{
     transition: all 0.3s;
@@ -20,8 +19,6 @@ header{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 350px;
-    height: 350px;
     z-index: 2;
 }
 header:hover .logo{
@@ -44,6 +41,21 @@ header:hover .whited{
     background-color: black;
     z-index: 1;
 }
+#menu{
+    display: flex;
+    justify-content:space-around;
+    vertical-align: middle;
+    align-items: center;
+    background-image: url('../img/JS-header.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 190px;
+    width: 100%;
+    z-index: 20;
+    position: sticky;
+    top: 0;
+}
 header > p{
     transition: all 0.3s;
     position: absolute;
@@ -63,50 +75,198 @@ a{
     font-size: 32px;
     transition: all 0.3s;
 }
-#menu > a:hover{
-    font-size: 42px;
+.float_right{
+    float: right;
 }
-#menu{
-    display: flex;
-    justify-content:space-around;
-    vertical-align: middle;
-    align-items: center;
-    background-image: url('../img/JS-header.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 190px;
-    width: 100%;
-    z-index: 20;
-    position: sticky;
-    top: 0;
+@media(min-width:1280px)
+{
+    header{
+        font-size: 72px;
+    }
+    .logo{
+        width: 350px;
+        height: 350px;
+    }
+    .float_right{
+        width: 200px;
+    }
+    #switchLanguage{
+        position: absolute;
+        height: 80px;
+        border: none;
+        right: 20px;
+    }
+    #good{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .big{
+        font-size: 200px;
+        margin: 20px;
+    }
+    #good > img{
+        height: 200px;
+    }
+    main {
+        font-size:32px;
+    }
+    #menu > a:hover{
+        font-size: 32px;
+    }
+    #switchLanguage{
+        position: absolute;
+        border: none;
+        right: 20px;
+        width: 7%;
+    }
 }
-.big{
-    font-size: 200px;
-    margin: 20px;
+@media(max-width:1280px) and (min-width:1024px)
+{
+    header{
+        font-size: 72px;
+    }
+    .logo{
+        width: 350px;
+        height: 350px;
+    }
+    .float_right{
+        width: 20%;
+    }
+    #switchLanguage{
+        position: absolute;
+        border: none;
+        right: 20px;
+    }
+    #good{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .big{
+        font-size: 80px;
+        margin: 18px;
+    }
+    #good > img{
+        width: 20%;
+    }
+    main {
+        font-size:32px;
+    }
+    #menu > a{
+        font-size: 32px;
+    }
+    footer img{
+        width: 100px;
+    }
+    #menu{
+        height: 100px;
+    }
+    #switchLanguage{
+        position: absolute;
+        border: none;
+        right: 20px;
+        width: 7%;
+    }
 }
-#good > img{
-    height: 200px;
+@media(max-width:1024px)
+{
+    header{
+        font-size: 35px;
+    }
+    .logo{
+        width: 70px;
+        height: 70px;
+    }
+    header:hover .logo{
+        transform: translate(-70px, 0);
+    }
+    header:hover p{
+        opacity: 1;
+        transform: translate(70px, 0);
+    }
+    .float_right{
+        width: 20%;
+    }
+    #switchLanguage{
+        position: absolute;
+        width: 10%;
+        border: none;
+        right: 20px;
+    }
+    #good{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .big{
+        font-size: 80px;
+        margin: 0;
+    }
+    #switchLanguage{
+        position: absolute;
+        border: none;
+        right: 20px;
+        bottom: 20px;
+    }
+    #good > img{
+        width: 20%;
+    }
+    main {
+        font-size:16px;
+    }
+    #menu > a{
+        font-size: 20px;
+    }
+    #menu > a:hover{
+        font-size: 28px;
+    }
+    footer img{
+        width: 100px;
+    }
+    footer{
+        font-size: 25px;
+    }
 }
-#good{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media(min-width:830px) and (max-width:1024px){
+    #menu{
+        height: 100px;
+    }
+}
+@media(min-width:768px) and (max-width:1024px){
+    header{
+        font-size: 60px;
+    }
+    .logo{
+        width: 120px;
+        height: 120px;
+    }
+    header p{
+        margin: 0;
+        margin-top: 10px;
+    }
+    header:hover .logo{
+        transform: translate(-100px, 0);
+    }
+    header:hover p{
+        opacity: 1;
+        transform: translate(100px, 0);
+    }
+}
+@media(min-width:500px) and (max-width:830px){
+    #menu{
+        height: 80px;
+    }
 }
 main h1{
     font-size: 54px;
-}
-.float_right{
-    float: right;
-    width: 200px;
-    height: 200px;
 }
 main > p{
     margin: 40px;
 }
 main {
     padding:20px;
-    font-size:32px;
     font-family: 'Oxygen', sans-serif;
     text-align: center;
     margin: 50px 0;
@@ -118,10 +278,4 @@ footer{
     justify-content: space-around;
     align-items: center;
     display: flex;
-}
-#switchLanguage{
-    position: absolute;
-    height: 80px;
-    border: none;
-    right: 20px;
 }
