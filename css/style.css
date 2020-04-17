@@ -39,6 +39,9 @@ pre{
 .text{
     color: greenyellow;
 }
+ol{
+    text-align: left;
+}
 a{
     color: inherit;
     text-decoration: none;
