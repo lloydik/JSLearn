@@ -2,12 +2,6 @@
 main h1{
     font-size: 54px;
 }
-#switchLanguage{
-    position: absolute;
-    height: 80px;
-    border: none;
-    right: 20px;
-}
 pre{
     border: 2px solid black;
     background-color: #2b2b2b;
@@ -42,10 +36,12 @@ pre{
 ol{
     text-align: left;
 }
+#menu a{
+    margin: 0 50px;
+}
 a{
     color: inherit;
     text-decoration: none;
-    font-size: 32px;
     transition: all 0.3s;
 }
 #menu > a:hover{
@@ -74,10 +70,7 @@ body{
     display: flex;
     justify-content:space-around;
     align-items: center;
-    background-image: url(../img/JS-header.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-color: #f7df1d;
     height: 190px;
     width: 100%;
     z-index: 20;
@@ -109,4 +102,260 @@ footer{
     justify-content: space-around;
     align-items: center;
     display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(min-width:1280px)
+{
+    .home{
+        height: 180px;
+    }
+    header{
+        font-size: 72px;
+    }
+    .logo{
+        width: 350px;
+        height: 350px;
+    }
+    .float_right{
+        width: 200px;
+    }
+    #switchLanguage{
+        position: absolute;
+        height: 80px;
+        border: none;
+        right: 20px;
+        width: 7%;
+    }
+    #good{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .big{
+        font-size: 200px;
+        margin: 20px;
+    }
+    #good > img{
+        height: 200px;
+    }
+    main {
+        font-size:32px;
+    }
+    #menu > a{
+        font-size: 28px;
+    }
+    #menu > a:hover{
+        font-size: 32px;
+    }
+}
+@media(max-width:1280px) and (min-width:1024px)
+{
+    #menu > a{
+        font-size: 28px;
+    }
+    .home{
+        height: 90px;
+    }
+    header{
+        font-size: 72px;
+    }
+    .logo{
+        width: 350px;
+        height: 350px;
+    }
+    .float_right{
+        width: 20%;
+    }
+    #switchLanguage{
+        position: absolute;
+        border: none;
+        right: 20px;
+        width: 7%;
+    }
+    #good{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .big{
+        font-size: 80px;
+        margin: 18px;
+    }
+    #good > img{
+        width: 20%;
+    }
+    main {
+        font-size:32px;
+    }
+    #menu > a{
+        font-size: 32px;
+    }
+    footer img{
+        width: 100px;
+    }
+    #menu{
+        height: 100px;
+    }
+}
+@media(max-width:1024px)
+{
+    .home{
+        height: 90px;
+    }
+    header{
+        font-size: 35px;
+    }
+    .logo{
+        width: 70px;
+        height: 70px;
+    }
+    header:hover .logo{
+        transform: translate(-70px, 0);
+    }
+    header:hover p{
+        opacity: 1;
+        transform: translate(70px, 0);
+    }
+    .float_right{
+        width: 20%;
+    }
+    #switchLanguage{
+        position: absolute;
+        width: 5%;
+        border: none;
+        right: 20px;
+        bottom: 20px;
+    }
+    #good{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .big{
+        font-size: 80px;
+        margin: 0;
+    }
+    #good > img{
+        width: 50%;
+    }
+    main {
+        font-size:16px;
+    }
+    #menu > a{
+        font-size: 20px;
+    }
+    #menu > a:hover{
+        font-size: 28px;
+    }
+    footer img{
+        width: 100px;
+    }
+    footer{
+        font-size: 25px;
+    }
+}
+@media(min-width:830px) and (max-width:1024px){
+    #menu{
+        height: 100px;
+    }
+    .home{
+        height: 90px;
+    }
+}
+@media(min-width:768px) and (max-width:1024px){
+    header{
+        font-size: 60px;
+    }
+    .logo{
+        width: 120px;
+        height: 120px;
+    }
+    header p{
+        margin: 0;
+        margin-top: 10px;
+    }
+    header:hover .logo{
+        transform: translate(-100px, 0);
+    }
+    header:hover p{
+        opacity: 1;
+        transform: translate(100px, 0);
+    }
+}
+@media(min-width:500px) and (max-width:830px){
+    #menu{
+        height: 80px;
+    }
+    .home{
+        height: 50px;
+    }
+    .code{
+        font-size: 12px;
+    }
+    #menu > a{
+        font-size: 14px;
+    }
+}
+@media(max-width:500px){
+    #menu{
+        height: 50px;
+    }
+    .home{
+        height: 50px;
+    }
+    main h1{
+        font-size: 30px;
+    }
+    #menu > a{
+        margin: 0;
+        font-size: 10px;
+    }
+    #menu > a:hover{
+        font-size: 14px;
+    }
+    #switchLanguage{
+        position: absolute;
+        border: none;
+        right: 20%;
+        bottom: 0;
+    }
+}
+@media(max-width:320px){
+    main a{
+        margin: 0;
+        font-size: 14px;
+    }
+}
+@media(min-width:460px) and (max-width: 500px){
+    .code{
+        font-size: 10px;
+    }
+    #menu > a{
+        font-size: 12px;
+    }
+}
+@media(max-width: 460px){
+    .code{
+        font-size: 8px;
+    }
+    p{
+        font-size: 12px;
+    }
+    #menu > a{
+        font-size: 10px;
+    }
 }

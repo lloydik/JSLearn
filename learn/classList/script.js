@@ -1,6 +1,6 @@
 'use strict';
-let menuEn = ["<a href='../index.html'>Learn</a><a href='../../about.html'>About</a> <img id='switchLanguage' src='../../img/SLRussia.png'>"];
-let menuRu = ["<a href='../index.html'>Изучить</a><a href='../../about.html'>О проекте</a><img id='switchLanguage' src='../../img/SLRussia.png'>"];
+let menuEn = ["<a href='../index.html'>Learn</a><a href='../index.html'><img class='home' src='../../img/JS-logo.png'></a><a href='../../about.html'>About</a> <img id='switchLanguage' src='../../img/SLRussia.png'>"];
+let menuRu = ["<a href='../index.html'>Изучить</a><a href='../index.html'><img class='home' src='../../img/JS-logo.png'></a><a href='../../about.html'>О проекте</a><img id='switchLanguage' src='../../img/SLRussia.png'>"];
 let footerRu = ['<a href="https://vk.com/lloydik2">Глазырин Артём</a> <a href="https://informatics.ru/"><img src="../../img/Logo.svg"></a>'];
 let footerEn = ['<a href="https://vk.com/lloydik2">Glazyrin Artem</a> <a href="https://informatics.ru/"><img src="../../img/Logo.svg"></a>'];
 let headerRu = ['<h1>classList. Условный оператор</h1>'];
@@ -48,7 +48,8 @@ let mainRu = [`
         <span class="keyword">&#60;script&#62;</span>
         <span class="keyword">"use strict";</span>
         <span class="elem">square</span>.<span class="title">addEventListener</span>(<span class="text">'click'</span>, <span class="args">function</span>(){
-            <span class="elem">square</span>.<span class="keyword">classList</span>.<span class="title">toggle</span>(<span class="text">'rounded'</span>);  <span class="com">//меняем состояние класса</span>
+            <span class="com">//меняем состояние класса</span>
+            <span class="elem">square</span>.<span class="keyword">classList</span>.<span class="title">toggle</span>(<span class="text">'rounded'</span>);
         });
         <span class="keyword">&#60;/script&#62;</span>
     <span class="keyword">&#60;/body></span>
@@ -99,7 +100,8 @@ let mainRu = [`
         <span class="keyword">&#60;script&#62;</span>
         <span class="keyword">"use strict";</span>
         <span class="elem">plus</span>.<span class="title">addEventListener</span>(<span class="text">'click'</span>, <span class="args">function</span>(){
-            <span class="elem">img</span>.<span class="keyword">classList</span>.<span class="title">toggle</span>(<span class="text">'small'</span>);  <span class="com">//Меняем состояние класса</span>
+            <span class="com">//Меняем состояние класса</span>
+            <span class="elem">img</span>.<span class="keyword">classList</span>.<span class="title">toggle</span>(<span class="text">'small'</span>);
         });
         <span class="keyword">&#60;/script&#62;</span>
     <span class="keyword">&#60;/body></span>
@@ -110,13 +112,18 @@ let mainRu = [`
         <pre class="code">
 <code class="code">
 <span class="keyword">if</span>(condition1){
-<span class="com">//твой код если condition1 == true. Например: clickCount > 100</span>
+<span class="com">//твой код если condition1 == true</span>
+<span class="com">//Например: clickCount > 100</span>
 }
 <span class="keyword">else if</span>(condition2){
-<span class="com">//твой код если condition2 == true, но condition1 == false. clickCount &#60; 100</span>
+<span class="com">//твой код если condition2 == true</span>
+<span class="com">//но condition1 == false</span>
+<span class="com">//Например: clickCount &#60; 100</span>
 }
 <span class="keyword">else</span>{
-<span class="com">//твой код если condition2 == false и condition1 == false. clickCount == 100</span>
+<span class="com">//твой код если condition2 == false</span>
+<span class="com">//и condition1 == false</span>
+<span class="com">//clickCount == 100</span>
 }
 </code>
         </pre>
@@ -139,14 +146,16 @@ let mainRu = [`
         <span class="keyword">&#60;script&#62;</span>
         <span class="keyword">"use strict";</span>
         <span class="elem">btn</span>.<span class="title">addEventListener</span>(<span class="text">'click'</span>, <span class="args">function</span>(){
-            <span class="keyword">if</span>(<span class="elem">ageField</span>.<span class="keyword">value</span> >= 18)<span class="com">//Пользователь совершеннолетний?</span>
+            <span class="com">//Пользователь совершеннолетний?</span>
+            <span class="keyword">if</span>(<span class="elem">ageField</span>.<span class="keyword">value</span> >= 18)
             {
-               <span class="keyword">alert(<span class = "text">"Welcome!"</span>);</span><span class="com">//печатаем Welcome!</span>
+                </span><span class="com">//печатаем Welcome!</span>
+                <span class="keyword">alert(<span class = "text">"Welcome!"</span>);
             }
             <span class="keyword">else</span>
-            <span class="com">//иначе</span>
             {
-                <span class="keyword">alert(<span class = "text">"Come back later:)"</span>);</span><span class="com">//печатаем Come back later:)</span>
+                <span class="com">//иначе печатаем Come back later:)</span>
+                <span class="keyword">alert(<span class = "text">"Come back later:)"</span>);</span>
             }
         });
         <span class="keyword">&#60;/script&#62;</span>
@@ -198,7 +207,8 @@ let mainEn = [
         <span class="keyword">&#60;script&#62;</span>
         <span class="keyword">"use strict";</span>
         <span class="elem">square</span>.<span class="title">addEventListener</span>(<span class="text">'click'</span>, <span class="args">function</span>(){
-            <span class="elem">square</span>.<span class="keyword">classList</span>.<span class="title">toggle</span>(<span class="text">'rounded'</span>);  <span class="com">//switch state of our class</span>
+            <span class="com">//switch state of our class</span>
+            <span class="elem">square</span>.<span class="keyword">classList</span>.<span class="title">toggle</span>(<span class="text">'rounded'</span>);
         });
         <span class="keyword">&#60;/script&#62;</span>
     <span class="keyword">&#60;/body></span>
@@ -249,7 +259,8 @@ let mainEn = [
         <span class="keyword">&#60;script&#62;</span>
         <span class="keyword">"use strict";</span>
         <span class="elem">plus</span>.<span class="title">addEventListener</span>(<span class="text">'click'</span>, <span class="args">function</span>(){
-            <span class="elem">img</span>.<span class="keyword">classList</span>.<span class="title">toggle</span>(<span class="text">'small'</span>);  <span class="com">//switch state of our class</span>
+            <span class="com">//switch state of our class</span>
+            <span class="elem">img</span>.<span class="keyword">classList</span>.<span class="title">toggle</span>(<span class="text">'small'</span>);
         });
         <span class="keyword">&#60;/script&#62;</span>
     <span class="keyword">&#60;/body></span>
@@ -260,13 +271,18 @@ let mainEn = [
         <pre class="code">
 <code class="code">
 <span class="keyword">if</span>(condition1){
-<span class="com">//your code if condition1 is true. For example: clickCount > 100</span>
+<span class="com">//your code if condition1 is true</span> 
+<span class="com">//For example: clickCount > 100</span>
 }
 <span class="keyword">else if</span>(condition2){
-<span class="com">//your code if condition2 is true but condition1 is false. clickCount &#60; 100</span>
+<span class="com">//your code if condition2 is true</span>
+<span class="com">//but condition1 is false</span>
+<span class="com">//clickCount &#60; 100</span>
 }
 <span class="keyword">else</span>{
-<span class="com">//your code if condition2 is false and condition1 is false. clickCount == 100</span>
+<span class="com">//your code if condition2 is false</span>
+<span class="com">//and condition1 is false</span>
+<span class="com">//clickCount == 100</span>
 }
 </code>
         </pre>
@@ -289,14 +305,16 @@ let mainEn = [
         <span class="keyword">&#60;script&#62;</span>
         <span class="keyword">"use strict";</span>
         <span class="elem">btn</span>.<span class="title">addEventListener</span>(<span class="text">'click'</span>, <span class="args">function</span>(){
-            <span class="keyword">if</span>(<span class="elem">ageField</span>.<span class="keyword">value</span> >= 18)<span class="com">//Check if the user is an adult</span>
+            <span class="keyword">if</span>(<span class="elem">ageField</span>.<span class="keyword">value</span> >= 18)
             {
-               <span class="keyword">alert(<span class = "text">"Welcome!"</span>);</span><span class="com">//print Welcome!</span>
+                <span class="com">//Check if the user is an adult</span>
+                <span class="com">//print Welcome!</span>
+                <span class="keyword">alert(<span class = "text">"Welcome!"</span>);</span>
             }
             <span class="keyword">else</span>
-            <span class="com">//else</span>
             {
-                <span class="keyword">alert(<span class = "text">"Come back later:)"</span>);</span><span class="com">//print Come back later:)</span>
+                <span class="com">//else print Come back later:)</span>
+                <span class="keyword">alert(<span class = "text">"Come back later:)"</span>);</span>
             }
         });
         <span class="keyword">&#60;/script&#62;</span>

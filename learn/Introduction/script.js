@@ -312,8 +312,8 @@ let mainEn = [
         <p>Also you can add event listener to other tags(div p etc.). for example: <span class="attention">divId.addEventListener("click" function(){});</span></p>
         <p>Congrats! Now you create a web-clicker! You can style your game and make her more interesting!</p>`
         ];
-let menuEn = ["<a href='../index.html'>Learn</a><a href='../../about.html'>About</a> <img id='switchLanguage' src='../../img/SLRussia.png'>"];
-let menuRu = ["<a href='../index.html'>Изучить</a><a href='../../about.html'>О проекте</a><img id='switchLanguage' src='../../img/SLRussia.png'>"];
+let menuEn = ["<a href='../index.html'>Learn</a><a href='../index.html'><img class='home' src='../../img/JS-logo.png'></a><a href='../../about.html'>About</a> <img id='switchLanguage' src='../../img/SLRussia.png'>"];
+let menuRu = ["<a href='../index.html'>Изучить</a><a href='../index.html'><img class='home' src='../../img/JS-logo.png'></a><a href='../../about.html'>О проекте</a><img id='switchLanguage' src='../../img/SLRussia.png'>"];
 let footerRu = ['<a href="https://vk.com/lloydik2">Глазырин Артём</a> <a href="https://informatics.ru/"><img src="../../img/Logo.svg"></a>'];
 let footerEn = ['<a href="https://vk.com/lloydik2">Glazyrin Artem</a> <a href="https://informatics.ru/"><img src="../../img/Logo.svg"></a>'];
 

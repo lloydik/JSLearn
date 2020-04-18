@@ -16,8 +16,8 @@
             ['Introduction. addEventListener. innerHTML'],
             ['classList. condition operator'],
         ];
-        let menuEn= ['Learn', 'About', ''];
-        let menuRu= ['Изучить', 'О проекте', ''];
+        let menuEn= ['Learn', '<img class="home" src="../img/JS-logo.png">','About', ''];
+        let menuRu= ['Изучить', '<img class="home" src="../img/JS-logo.png">','О проекте', ''];
         let footerRu= ['Глазырин Артём', '<a href = "https://informatics.ru/"><img src ="../img/Logo.svg"></a>'];
         let footerEn= ['Glazyrin Artem', '<a href = "https://informatics.ru/"><img src ="../img/Logo.svg"></a>'];
         let olRu = [];
