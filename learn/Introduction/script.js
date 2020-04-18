@@ -2,16 +2,16 @@
 let headerRu = ['<h1>Введение. .innerHTML. Кнопка</h1>'];
 let headerEn = ['<h1>Introduction. innerHTML. button</h1>'];
 let mainRu = [
-            `<p>Привет! Добро пожаловать на первый урок по JavaScript. Давай сначала поговорим о самом языке.</p>   <p>Первое что яхотел сказать: JavaScript &#8800; Java. Многие путают эти два языка и они не видят разницы между этими языками. Java выглядит так:</p><pre class="code">
-            <code class="code">
+            `<p>Привет! Добро пожаловать на первый урок по JavaScript. Давай сначала поговорим о самом языке.</p>   <p>Первое что яхотел сказать: JavaScript &#8800; Java. Многие путают эти два языка и они не видят разницы между этими языками. Java выглядит так:</p>
+<pre class="code">
+<code class="code">
     <span class="keyword">class </span><span class="title">HelloWorld</span>{
             <span class="keyword">public static void </span> <span class="title">main</span> <span class="args">(String args [])</span> {
             <span class="keyword">System</span>.<span class="keyword">out</span>.<span class="title">println</span>(<span class="text">"Hello World"</span>);
             }
         }
 </code>
-
-        </pre>
+</pre>
         <p>JavaScript выглядит так:</p>
         <pre class="code">
     <code class="code">
@@ -143,10 +143,13 @@ let mainRu = [
         <span class="keyword">&#60;p id=<span class="text">"elem"</span>&#62;<span class="title">JS - cool!</span>&#60;/p></span>
     <span class="keyword">&#60;script&#62;</span>
         <span class="keyword">"use strict";</span>
-        <span class="keyword">let</span> <span class="title">clickCount</span> = 0;<span class="com">//Объявляем переменную кол-ва кликов</span>
-        <span class="elem">btn</span>.<span class="keyword">addEventListener(<span class="text">"click"</span> function(){<span class="com">//Добавляем прослушку</span>
+        <span class="com">//Объявляем переменную кол-ва кликов</span>
+        <span class="keyword">let</span> <span class="title">clickCount</span> = 0;
+        <span class="com">//Добавляем прослушку нажатия кнопки</span>
+        <span class="elem">btn</span>.<span class="keyword">addEventListener(<span class="text">"click"</span> function(){
             <span class="title">clickCount++;</span><span class="com">//clickCount += 1</span>
-            <span class="elem">elem</span>.<span class="keyword">innerHTML</span> = <span class="text">clickCount</span>;<span class="com">//Обновляем информацию</span>
+            <span class="com">//Обновляем информацию</span>
+            <span class="elem">elem</span>.<span class="keyword">innerHTML</span> = <span class="text">clickCount</span>;
         });</span>
     <span class="keyword">&#60;/script&#62;</span>
     <span class="keyword">&#60;/body></span>
@@ -157,15 +160,15 @@ let mainRu = [
         ];
 let mainEn = [
 `<p>Hello! Welcome to first lesson of JavaScript. lets talk about JavaScript.</p> <p>The first thing I wanted to say is that JavaScript &#8800; Java. Many confuse these two languages and they dont see the difference between them. This is what Java looks like:</p>
-        <pre class="code">
+<pre class="code">
 <code class="code">
-    <span class="keyword">class </span><span class="title">HelloWorld</span>{
-            <span class="keyword">public static void </span> <span class="title">main</span> <span class="args">(String args [])</span> {
-            <span class="keyword">System</span>.<span class="keyword">out</span>.<span class="title">println</span>(<span class="text">"Hello World"</span>);
-            } 
-        }
+<span class="keyword">class </span><span class="title">HelloWorld</span>{
+        <span class="keyword">public static void </span> <span class="title">main</span> <span class="args">(String args [])</span> {
+        <span class="keyword">System</span>.<span class="keyword">out</span>.<span class="title">println</span>(<span class="text">"Hello World"</span>);
+        } 
+    }
 </code>
-        </pre>
+</pre>
         <p>JavaScript looks like:</p>
         <pre class="code">
     <code class="code">
@@ -300,9 +303,11 @@ let mainEn = [
     <span class="keyword">&#60;script&#62;</span>
         <span class="keyword">"use strict";</span>
         <span class="keyword">let</span> <span class="title">clickCount</span> = 0;<span class="com">//Declare a variable</span>
-        <span class="elem">btn</span>.<span class="keyword">addEventListener(<span class="text">"click"</span> function(){<span class="com">//Add Click listener</span>
+        <span class="com">//Add Click listener</span>
+        <span class="elem">btn</span>.<span class="keyword">addEventListener(<span class="text">"click"</span> function(){
             <span class="title">clickCount++;</span><span class="com">//clickCount += 1</span>
-            <span class="elem">elem</span>.<span class="keyword">innerHTML</span> = <span class="text">clickCount</span>;<span class="com">//update information</span>
+            <span class="com">//update information</span>
+            <span class="elem">elem</span>.<span class="keyword">innerHTML</span> = <span class="text">clickCount</span>;
         });</span>
     <span class="keyword">&#60;/script&#62;</span>
     <span class="keyword">&#60;/body></span>
