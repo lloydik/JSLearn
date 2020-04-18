@@ -46,10 +46,7 @@ header:hover .whited{
     justify-content:space-around;
     vertical-align: middle;
     align-items: center;
-    background-image: url('../img/JS-header.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-color: #f7df1d;
     height: 190px;
     width: 100%;
     z-index: 20;
@@ -80,6 +77,9 @@ a{
 }
 @media(min-width:1280px)
 {
+    .home{
+        height: 180px;
+    }
     header{
         font-size: 72px;
     }
@@ -123,6 +123,9 @@ a{
 }
 @media(max-width:1280px) and (min-width:1024px)
 {
+    .home{
+        height: 100px;
+    }
     header{
         font-size: 72px;
     }
@@ -162,6 +165,9 @@ a{
     #menu{
         height: 100px;
     }
+    .home{
+        height: 100px;
+    }
     #switchLanguage{
         position: absolute;
         border: none;
@@ -171,6 +177,9 @@ a{
 }
 @media(max-width:1024px)
 {
+    .home{
+        height: 100px;
+    }
     header{
         font-size: 35px;
     }
@@ -233,6 +242,9 @@ a{
     #menu{
         height: 100px;
     }
+    .home{
+        height: 100px;
+    }
 }
 @media(min-width:768px) and (max-width:1024px){
     header{
@@ -256,6 +268,9 @@ a{
 }
 @media(min-width:500px) and (max-width:830px){
     #menu{
+        height: 80px;
+    }
+    .home{
         height: 80px;
     }
 }
