@@ -31,6 +31,26 @@ header:hover p{
 header:hover .whited{
     opacity:0.5;
 }
+main h1{
+    font-size: 54px;
+}
+main > p{
+    margin: 40px;
+}
+main {
+    padding:20px;
+    font-family: 'Oxygen', sans-serif;
+    text-align: center;
+    margin: 50px 0;
+}
+footer{
+    background-color: #f8e320;
+    height: 100px;
+    font-size: 36px;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
 .whited{
     transition: all 0.3s;
     width: 100%;
@@ -124,7 +144,7 @@ a{
 @media(max-width:1280px) and (min-width:1024px)
 {
     .home{
-        height: 100px;
+        height: 90px;
     }
     header{
         font-size: 72px;
@@ -165,9 +185,6 @@ a{
     #menu{
         height: 100px;
     }
-    .home{
-        height: 100px;
-    }
     #switchLanguage{
         position: absolute;
         border: none;
@@ -178,7 +195,7 @@ a{
 @media(max-width:1024px)
 {
     .home{
-        height: 100px;
+        height: 90px;
     }
     header{
         font-size: 35px;
@@ -243,7 +260,7 @@ a{
         height: 100px;
     }
     .home{
-        height: 100px;
+        height: 90px;
     }
 }
 @media(min-width:768px) and (max-width:1024px){
@@ -271,26 +288,39 @@ a{
         height: 80px;
     }
     .home{
-        height: 80px;
+        height: 50px;
     }
 }
-main h1{
-    font-size: 54px;
+@media(max-width:500px){
+    a{
+        font-size: 16px;
+    }
+    #menu{
+        height: 100px;
+    }
+    .home{
+        height: 50px;
+    }
+    main h1{
+        font-size: 30px;
+    }
+    #menu > a{
+        margin: 0;
+        font-size: 14px;
+    }
+    #menu > a:hover{
+        font-size: 16px;
+    }
+    #switchLanguage{
+        position: absolute;
+        border: none;
+        right: 20%;
+        bottom: 20px;
+    }
 }
-main > p{
-    margin: 40px;
-}
-main {
-    padding:20px;
-    font-family: 'Oxygen', sans-serif;
-    text-align: center;
-    margin: 50px 0;
-}
-footer{
-    background-color: #f8e320;
-    height: 100px;
-    font-size: 36px;
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
+@media(max-width:320px){
+    a{
+        margin: 0;
+        font-size: 14px;
+    }
 }
