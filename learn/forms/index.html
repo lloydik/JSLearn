@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS Learn</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" href="../../img/JS-logo.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="menu">
+    </div>
+    <header>
+        <h1>HTML Формы, взаимодействие</h1>
+    </header>
+
+    <main>
+         <p>На этом уроке мы с вами будем взаимодействие </p>
+            <ol>
+                <li><span class="attention">.add('class')</span> - добавит класс <span class="keyword">class</span> в classList</li>
+                <li><span class="attention">.remove('class')</span> - Удалит  class <span class="keyword">class</span> из classList</li>
+                <li><span class="attention">.toggle('class')</span> -Сменит состояние класса <span class="keyword">class</span> (удалит если такой класс был, добавит если не было)</li>
+                <li><span class="attention">.contains('class')</span> - проверит есть ли класс <span class="keyword">class</span> в списке, если да вернет true, иначе false</li>
+            </ol>
+            <p>Зачем нам нужен classList? Чтобы упралять стилями! Пример кода будет выглядеть так:</p>
+            <pre class="code">
+    <code class="code">
+    <span>&#60;!DOCTYPE html></span>
+    <span class="keyword">&#60;html lang=<span class="text">"en"</span>></span>
+        <span class="keyword">&#60;head></span>
+            <span class="keyword">&#60;meta charset=<span class="text">"UTF-8"</span>></span>
+            <span class="keyword">&#60;title><span class="title">JS Learn</span>&#60;/title></span>
+        <span class="keyword">&#60;/head></span>
+
+        <span class="keyword">&#60;style></span>
+            <span class="title">body</span>{
+                <span class="keyword">font-family</span>: <span class="args">sans-serif</span>;
+                <span class="keyword">text-align</span>: <span class="args">center</span>;
+            }
+            <span class="title">#square</span>{
+                <span class="keyword">width</span>: <span class="args">100px</span>;
+                <span class="keyword">text-align</span>: <span class="args">center</span>;
+                <span class="keyword">height</span>: <span class="args">100px</span>;
+                <span class="keyword">border</span>: <span class="args">3px solid #2d3436</span>;
+                <span class="keyword">background-color</span>: <span class="args">#55efc4</span>;
+                <span class="keyword">transition</span>: <span class="args">0.3s</span>;
+                <span class="keyword">margin</span>: <span class="args">auto</span>;
+            }
+            <span class="title">.rounded</span>{
+                <span class="keyword">border-radius</span>: <span class="args">50px</span>;
+            }
+        <span class="keyword">&#60;/style></span>
+
+        <span class="keyword">&#60;body></span>
+            <span class="keyword"> &#60;div id=<span class="text">"block"</span>&#60;/div></span>
+            <span class="keyword">&#60;script&#62;</span>
+            <span class="keyword">"use strict";</span>
+            <span class="elem">square</span>.<span class="title">addEventListener</span>(<span class="text">'click'</span>, <span class="args">function</span>(){
+                <span class="com">//меняем состояние класса</span>
+                <span class="elem">square</span>.<span class="keyword">classList</span>.<span class="title">toggle</span>(<span class="text">'rounded'</span>);
+            });
+            <span class="keyword">&#60;/script&#62;</span>
+        <span class="keyword">&#60;/body></span>
+    <span class="keyword">&#60;/html&#62;</span>
+    </code>
+            </pre>
+            <p>Попробуйте запустить этот код, и может быть вы сможете лучше понять classList. Мы можем использовать classList к примеру: для кнопки "Показать полностью". Code:</p>
+            <pre class="code">
+    <code class="code">
+    <span>&#60;!DOCTYPE html></span>
+    <span class="keyword">&#60;html lang=<span class="text">"en"</span>></span>
+        <span class="keyword">&#60;head></span>
+            <span class="keyword">&#60;meta charset=<span class="text">"UTF-8"</span>></span>
+            <span class="keyword">&#60;title><span class="title">JS Learn</span>&#60;/title></span>
+        <span class="keyword">&#60;/head></span>
+
+        <span class="keyword">&#60;style></span>
+            <span class="title">img</span>{
+                <span class="keyword">width</span>: <span class="args">300px</span>;
+                <span class="keyword">background-image</span>: <span class="args">url("URL")</span>;
+                <span class="keyword">background-position</span>: <span class="args">center center</span>;
+                <span class="keyword">background-size</span>: <span class="args">cover</span>;
+                <span class="keyword">transition</span>: <span class="args">all 0.5s</span>;
+                <span class="keyword">height</span>: <span class="args">222px</span>;
+            }
+            <span class="title">button</span>{
+                <span class="keyword">border-radius</span>: <span class="args">10px</span>;
+                <span class="keyword">font-size</span>: <span class="args">column</span>;
+                <span class="keyword">margin-top</span>: <span class="args">center</span>;
+                <span class="keyword">padding</span>: <span class="args">15px</span>;
+            }
+            <span class="title">main</span>{
+                <span class="keyword">display</span>: <span class="args">flex</span>;
+                <span class="keyword">flex-direction</span>: <span class="args">center</span>;
+                <span class="keyword">justify-content</span>: <span class="args">100px</span>;
+                <span class="keyword">align-items</span>: <span class="args">center</span>;
+            }
+            <span class="title">.small</span>{
+                <span class="keyword">height</span>: <span class="args">20px</span>;
+            }
+        <span class="keyword">&#60;/style></span>
+
+        <span class="keyword">&#60;body></span>
+            <span class="keyword">&#60;main></span>
+                <span class="keyword">&#60;div class=<span class="text">"small"</span> id=<span class="text">"img"</span>>&#60;/div></span>
+                 <span class="keyword">&#60;button id="plus">Show full&#60;/button></span>
+            <span class="keyword">&#60;/main></span>
+            <span class="keyword">&#60;script&#62;</span>
+            <span class="keyword">"use strict";</span>
+            <span class="elem">plus</span>.<span class="title">addEventListener</span>(<span class="text">'click'</span>, <span class="args">function</span>(){
+                <span class="com">//Меняем состояние класса</span>
+                <span class="elem">img</span>.<span class="keyword">classList</span>.<span class="title">toggle</span>(<span class="text">'small'</span>);
+            });
+            <span class="keyword">&#60;/script&#62;</span>
+        <span class="keyword">&#60;/body></span>
+    <span class="keyword">&#60;/html&#62;</span>
+    </code>
+            </pre>
+            <p>Что делать если нам надо производить некоторые действия при определенном условии? Мы должны использовать условный оператор- if. Структура:</p>
+            <pre class="code">
+    <code class="code">
+    <span class="keyword">if</span>(condition1){
+    <span class="com">//твой код если condition1 == true</span>
+    <span class="com">//Например: clickCount > 100</span>
+    }
+    <span class="keyword">else if</span>(condition2){
+    <span class="com">//твой код если condition2 == true</span>
+    <span class="com">//но condition1 == false</span>
+    <span class="com">//Например: clickCount &#60; 100</span>
+    }
+    <span class="keyword">else</span>{
+    <span class="com">//твой код если condition2 == false</span>
+    <span class="com">//и condition1 == false</span>
+    <span class="com">//clickCount == 100</span>
+    }
+    </code>
+            </pre>
+            <p>Например: мы можем считать возраст пользователя. Пользователь ввожит в поле свой возраст и наш скрипт обрабатывает его.</p>
+            <pre class="code">
+    <code class="code">
+    <span>&#60;!DOCTYPE html></span>
+    <span class="keyword">&#60;html lang=<span class="text">"en"</span>></span>
+        <span class="keyword">&#60;head></span>
+            <span class="keyword">&#60;meta charset=<span class="text">"UTF-8"</span>></span>
+            <span class="keyword">&#60;title><span class="title">JS Learn</span>&#60;/title></span>
+        <span class="keyword">&#60;/head></span>
+
+        <span class="keyword">&#60;body></span>
+            <span class="keyword">&#60;main></span>
+                <span class="keyword">&#60;input id=<span class="text">"ageField"</span>>&#60;/div></span>
+                 <span class="keyword">&#60;button id="btn">Registrate&#60;/button></span>
+            <span class="keyword">&#60;/main></span>
+
+            <span class="keyword">&#60;script&#62;</span>
+            <span class="keyword">"use strict";</span>
+            <span class="elem">btn</span>.<span class="title">addEventListener</span>(<span class="text">'click'</span>, <span class="args">function</span>(){
+                <span class="com">//Пользователь совершеннолетний?</span>
+                <span class="keyword">if</span>(<span class="elem">ageField</span>.<span class="keyword">value</span> >= 18)
+                {
+                    <span class="com">//печатаем Welcome!</span>
+                    <span class="keyword">alert(<span class = "text">"Welcome!"</span>);</span>
+                }
+                <span class="keyword">else</span>
+                {
+                    <span class="com">//иначе печатаем Come back later:)</span>
+                    <span class="keyword">alert(<span class = "text">"Come back later:)"</span>);</span>
+                }
+            });
+            <span class="keyword">&#60;/script&#62;</span>
+        <span class="keyword">&#60;/body></span>
+    <span class="keyword">&#60;/html&#62;</span>
+    </code>
+            </pre>
+            <p>Развлекайся :)</p>
+    </main>
+
+    <footer></footer>
+
+   <!--<script src="script.js">    </script>-->
+</body>
+
+</html>

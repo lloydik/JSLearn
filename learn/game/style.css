@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+#playField {
+    width: 100vw;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+#player {
+    cursor: pointer;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+}
+
+.finish {
+    bottom: 0;
+    right: 0;
+    height: 100px;
+    background-color: black;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 24px;
+}
+
+#res{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

@@ -18,8 +18,9 @@
         ];
         let menuEn= ['Learn', '<img class="home" src="../img/JS-logo.png">','About', ''];
         let menuRu= ['Изучить', '<img class="home" src="../img/JS-logo.png">','О проекте', ''];
-        let footerRu= ['Глазырин Артём', '<a href = "https://informatics.ru/"><img src ="../img/Logo.svg"></a>'];
-        let footerEn= ['Glazyrin Artem', '<a href = "https://informatics.ru/"><img src ="../img/Logo.svg"></a>'];
+
+let footerRu= ['Глазырин Артём, Кукин Максим', '<a href = "https://informatics.ru/"><img src ="../../img/Logo.svg"></a>'];
+let footerEn= ['Glazyrin Artem, Kukin Maxim', '<a href = "https://informatics.ru/"><img src ="../../img/Logo.svg"></a>'];
         let olRu = [];
         let olEn = [];
         

@@ -319,8 +319,9 @@ let mainEn = [
         ];
 let menuEn = ["<a href='../index.html'>Learn</a><a href='../index.html'><img class='home' src='../../img/JS-logo.png'></a><a href='../../about.html'>About</a> <img id='switchLanguage' src='../../img/SLRussia.png'>"];
 let menuRu = ["<a href='../index.html'>Изучить</a><a href='../index.html'><img class='home' src='../../img/JS-logo.png'></a><a href='../../about.html'>О проекте</a><img id='switchLanguage' src='../../img/SLRussia.png'>"];
-let footerRu = ['<a href="https://vk.com/lloydik2">Глазырин Артём</a> <a href="https://informatics.ru/"><img src="../../img/Logo.svg"></a>'];
-let footerEn = ['<a href="https://vk.com/lloydik2">Glazyrin Artem</a> <a href="https://informatics.ru/"><img src="../../img/Logo.svg"></a>'];
+
+let footerRu= ['Глазырин Артём, Кукин Максим', '<a href = "https://informatics.ru/"><img src ="../../img/Logo.svg"></a>'];
+let footerEn= ['Glazyrin Artem, Kukin Maxim', '<a href = "https://informatics.ru/"><img src ="../../img/Logo.svg"></a>'];
 
 let RuPage = [menuRu, headerRu, mainRu, footerRu];
 let EnPage = [menuEn, headerEn, mainEn, footerEn];

@@ -1,10 +1,11 @@
 'use strict';
 let menuEn = ["<a href='../index.html'>Learn</a><a href='../index.html'><img class='home' src='../../img/JS-logo.png'></a><a href='../../about.html'>About</a> <img id='switchLanguage' src='../../img/SLRussia.png'>"];
 let menuRu = ["<a href='../index.html'>Изучить</a><a href='../index.html'><img class='home' src='../../img/JS-logo.png'></a><a href='../../about.html'>О проекте</a><img id='switchLanguage' src='../../img/SLRussia.png'>"];
+
 let footerRu= ['Глазырин Артём, Кукин Максим', '<a href = "https://informatics.ru/"><img src ="../../img/Logo.svg"></a>'];
 let footerEn= ['Glazyrin Artem, Kukin Maxim', '<a href = "https://informatics.ru/"><img src ="../../img/Logo.svg"></a>'];
-let headerRu = ['<h1>classList. Условный оператор</h1>'];
-let headerEn = ['<h1>classList. condition operator</h1>'];
+let headerRu = ['<h1>HTML Формы, взаимодействие</h1>'];
+let headerEn = ['<h1>Interaction with HTML Forms</h1>'];
 let mainRu = [`
         <p>Привет!Добро пожаловать на второй урок по JavaScript. Сегодня мы поговорим о классах в css и условных операторах</p>
         <p>Сначала классы. Мы можем добавлять и удалять css лассы у элемента. classList позволяет это сделать. classList - по сути массив в каждом элементе, который хранит классы. Что может делать classList? classList может:</p>
