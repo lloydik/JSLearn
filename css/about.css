@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oxygen&display=swap');
+.logo{
+    transition: all 0.3s;
+    background-image: url(../img/JS-logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 2;
+}
+.ContentContainer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.invisible1{
+    position: relative;
+    background-color: rgba(255, 255, 255, 1);
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background-image: url("../img/Web-Developer.png");
+    background-size: cover;
+    background-position: center center;
+}
+.container{
+    width: 621px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    overflow: hidden;
+    z-index: 100;
+    text-align: left;
+}
+.container > p{
+    padding: 20px;
+}
+.circle{
+    top: -100%;
+    transition:top .1s ease-out,left .1s ease-out;
+    border-radius: 50%;
+    background-color: #f7df1d;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+main h1{
+    font-size: 54px;
+}
+main > p{
+    margin: 40px;
+}
+main {
+    padding:20px;
+    font-family: 'Oxygen', sans-serif;
+    text-align: center;
+    background-color: white;
+}
+footer{
+    background-color: #f8e320;
+    height: 100px;
+    font-size: 36px;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+#menu{
+    display: flex;
+    justify-content:space-around;
+    vertical-align: middle;
+    align-items: center;
+    background-color: #f7df1d;
+    height: 190px;
+    width: 100%;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+}
+body{
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    margin: 0 50px;
+    color: inherit;
+    text-decoration: none;
+    font-size: 32px;
+    transition: all 0.3s;
+}
+@media(min-width:1280px)
+{
+    .home{
+        height: 180px;
+    }
+    header{
+        font-size: 72px;
+    }
+    .logo{
+        width: 350px;
+        height: 350px;
+    }
+    #switchLanguage{
+        position: absolute;
+        height: 80px;
+        border: none;
+        right: 20px;
+    }
+    main {
+        font-size:20px;
+    }
+    #menu > a:hover{
+        font-size: 32px;
+    }
+    #switchLanguage{
+        position: absolute;
+        border: none;
+        right: 20px;
+        width: 7%;
+    }
+}
+@media(max-width:1280px) and (min-width:1024px)
+{
+    .home{
+        height: 90px;
+    }
+    header{
+        font-size: 72px;
+    }
+    .logo{
+        width: 350px;
+        height: 350px;
+    }
+    main {
+        font-size:20px;
+    }
+    #menu > a{
+        font-size: 32px;
+    }
+    footer img{
+        width: 100px;
+    }
+    #menu{
+        height: 100px;
+    }
+    #switchLanguage{
+        position: absolute;
+        border: none;
+        right: 20px;
+        width: 7%;
+    }
+}
+@media(max-width:1024px)
+{
+    .home{
+        height: 90px;
+    }
+    main {
+        font-size:16px;
+    }
+    #menu > a{
+        font-size: 20px;
+    }
+    #menu > a:hover{
+        font-size: 28px;
+    }
+    footer img{
+        width: 100px;
+    }
+    footer{
+        font-size: 25px;
+    }
+}
+@media(min-width:830px) and (max-width:1024px){
+    #menu{
+        height: 100px;
+    }
+    .home{
+        height: 90px;
+    }
+}
+@media(min-width:768px) and (max-width:1024px){
+    .logo{
+        width: 120px;
+        height: 120px;
+    }
+}
+@media(min-width:500px) and (max-width:830px){
+    #menu{
+        height: 80px;
+    }
+    .home{
+        height: 50px;
+    }
+}
+@media(max-width:500px){
+    a{
+        font-size: 16px;
+    }
+    #menu{
+        height: 100px;
+    }
+    .home{
+        height: 50px;
+    }
+    main h1{
+        font-size: 30px;
+    }
+    #menu > a{
+        margin: 0;
+        font-size: 14px;
+    }
+    #menu > a:hover{
+        font-size: 16px;
+    }
+    #switchLanguage{
+        position: absolute;
+        border: none;
+        right: 20%;
+        bottom: 0;
+    }
+}
+@media(max-width:320px){
+    a{
+        margin: 0;
+        font-size: 14px;
+    }
+}

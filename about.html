@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS Learn</title>
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="shortcut icon" href="img/JS-logo.png" type="image/png">
+</head>
+
+<body>    
+    <div id="menu">
+        <a href="learn/index.html">Learn</a>
+        <a href="index.html"><img class='home' src='img/JS-logo.png'></a>
+        <a href="about.html">About</a>
+    </div>
+
+    <main>
+      
+      
+       <div class = "ContentContainer">
+        <div class="container">
+            <div class="invisible1">
+                <div id="player" class="circle"></div>
+            </div>
+                <p>Цель нашего проекта: сохранить знания о JS на таком сайте. JavaScript на данный омент является самым популярным языком программирования и не просто так. JavaScript - язык, который есть во всех браузерах. С помощью него можно создать игры в браузерах, а также делать такие вещи, которые не умеет css. Еще столько всего не увидело свет, так что клавиатуру в руки и вперед</p>
+        </div>
+        
+        <div class="container">
+            <div class="invisible1">
+                <div id="player" class="circle"></div>
+            </div>
+                <p>JavaScript существует уже более 20 лет, и это один из тех языков, которые никогда не перестают развиваться. В последнее время язык быстро развивается, что заставляет меня задаться вопросом, будут ли современные технологии JavaScript для начинающих, которые хорошо известны сегодня, актуальными через пару лет. JavaScript содержит много библиотек для использования. Так что пользуйтесь на здоровье!</p>
+        </div>
+        </div>
+    </main>
+
+    <footer><a href = "https://informatics.ru/">Glazyrin Artem, Kukin Maxim</a> <a href = "https://informatics.ru/"><img src ='img/Logo.svg'></a></footer>
+
+    <script>
+        //WOW! You can find flag -> flag{JS_i5_C0o1}
+        'use strict';
+        let players = document.querySelectorAll("#player");
+        let containers = document.querySelectorAll(".container");
+        for(let i = 1; i < containers.length; i+=2){
+            containers[i].style.marginTop = "50px";
+            containers[i].querySelector('.invisible1').style.backgroundImage = "url('img/bg.png')";
+        }
+        for(let i = 0; i < players.length; i++)
+            {
+                document.querySelector('body').addEventListener('mousemove', function(e){
+                    if(i % 2 == 0)
+                    {
+                        players[i].style.top = e.clientY - parseInt(getComputedStyle(document.querySelector('#menu')).height) - 100   + "px";
+                        players[i].style.left = (e.clientX - 100 - containers[i].getBoundingClientRect().left) + "px";
+                    }
+                    else
+                    {
+                        players[i].style.top = e.clientY - parseInt(getComputedStyle(document.querySelector('#menu')).height) - parseInt(getComputedStyle(containers[i]).marginTop)+parseInt(getComputedStyle(containers[i]).marginBottom)- 100 + "px";
+                        players[i].style.left = ( e.clientX - containers[0].offsetWidth - parseInt(getComputedStyle(containers[0]).margin) * 2 - 100 - containers[0].getBoundingClientRect().left) + "px";
+                    }
+                });
+                players[i].addEventListener('mousemove', function(e){
+                    if(i % 2 == 0)
+                    {
+                        players[i].style.top = e.clientY - parseInt(getComputedStyle(document.querySelector('#menu')).height) - 100 + "px";
+                        players[i].style.left = (e.clientX - 100 - containers[i].getBoundingClientRect().left) + "px";
+                    }
+                    else
+                    {
+                        players[i].style.top = e.clientY - parseInt(getComputedStyle(document.querySelector('#menu')).height) - parseInt(getComputedStyle(containers[i]).marginTop)+parseInt(getComputedStyle(containers[i]).marginBottom)- 100 + "px";
+                        players[i].style.left = ( e.clientX - containers[0].offsetWidth - parseInt(getComputedStyle(containers[0]).margin) * 2 - 100 - containers[0].getBoundingClientRect().left) + "px";
+                    }
+                });
+            }
+    </script>
+</body>
+
+</html>
