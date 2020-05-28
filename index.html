@@ -44,6 +44,63 @@
 
     <script>
         'use strict';
+        
+        
+        let timeoutId;
+        let timeHelloId1;
+        let intervalId;
+        
+        let JsPanel = document.createElement('DIV');
+        JsPanel.setAttribute('id', 'panel');
+        
+        let JsBall = document.createElement('DIV');
+        JsBall.setAttribute('id', 'ball');
+        
+        
+        let JSP = document.createElement('P');
+        JSP.setAttribute('id', 'JSP');
+        JSP.innerHTML = "JSLEARN";
+        
+        function show_p() {
+            JSP.style.opacity = "1";
+        }
+        
+        JsPanel.appendChild(JsBall);
+        JsPanel.appendChild(JSP);
+        document.body.appendChild(JsPanel);
+        
+        let xP = JSP.getBoundingClientRect().left;
+        let yP = JSP.getBoundingClientRect().top;
+        function changeBallPosition() {
+            ball.classList.remove('down');
+            ball.classList.add('up');
+            
+            setTimeout(function(){
+                ball.classList.remove('up');
+                ball.classList.add('down');
+                setTimeout(function(){
+                    ball.classList.remove('down');
+                    ball.classList.add('up');
+                    ball.style.opacity = "0";
+                    show_p();
+                }, 300);
+            }, 300);
+            
+            
+        }
+        
+        timeHelloId1 = setTimeout(function(){
+            changeBallPosition();
+        }, 1000);
+        
+        timeoutId = setTimeout(function() {
+            clearInterval(intervalId);
+            JsPanel.remove();
+        }, 5000);
+        
+        
+        
+        
         let headerRu = ['&nbsp;'];
         let headerEn = ['&nbsp;'];
         let mainRu = [

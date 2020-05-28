@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 header{
     width: 100%;
     height: 100vh;
@@ -13,6 +14,55 @@ header{
     vertical-align: middle;
     align-items: center;
 }
+    body {
+        margin: 0;
+        height: 200vh;
+    }
+    .up{
+        margin-bottom: 200px;
+    }
+    .bottom{
+        margin-top: 200px;
+    }
+    .bottom{
+        margin: 0;
+    }
+    #panel {
+        position: fixed;
+        top: 0;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        flex-direction: column;
+        z-index: 100000;
+        transition: all 0.3s;
+        margin-left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    #JSP{
+        transition: all 0.3s;
+        opacity: 0;
+        color: #f7df1d;
+        margin: 0;
+        font-size: 200px;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+    }
+    #ball {
+        transition: all 0.3s linear;
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+        background-color: #f7df1d;
+    }
+    .pan{
+        height: 300px;
+        text-align: center;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
 .logo{
     transition: all 0.3s;
     background-image: url(../img/JS-logo.png);
