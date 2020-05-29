@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 body {
     display: flex;
     height: 100vh;
@@ -31,17 +32,39 @@ h1 {
     position: absolute;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
     font-size: 24px;
 }
 
-#res{
+#res {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+container {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:  100vw;
+    height: 100vh;
+}
+
+#confetti {
+    position: absolute;
+    width: 40%;
+    top: -70vh;
+    transition: all 0.7s;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
 }

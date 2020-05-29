@@ -1,6 +1,23 @@
 "use strict";
 //[left, top, rotate, width, height]
-let blockArr = [['200', '0', '0', '50', '500'], ['500', (document.documentElement.clientHeight - 500).toString(), '0', '50', '500'], ['800', '0', '0', '50', '500'], ['1100', (document.documentElement.clientHeight - 500).toString(), '0', '50', '500']];
+let blockArr = [['200', '0', '0', '50', '300'], 
+                ['200', (document.documentElement.clientHeight - 300).toString(), '0', '50', '300'],
+                
+                ['500', '0', '0', '50', '200'],
+                ['500', (document.documentElement.clientHeight - 500).toString(), '0', '50', '500'],
+                
+                ['800', '0', '0', '50', '500'],
+                ['800', (document.documentElement.clientHeight - 200).toString(), '0', '50', '200'],
+                
+                ['1000', '0', '0', '50', '0'],
+                ['1000', (document.documentElement.clientHeight - 700).toString(), '0', '50', '700'],
+                
+                ['1200', '0', '0', '50', '700'],
+                ['1200', (document.documentElement.clientHeight).toString(), '0', '50', '0'],
+                
+                ['1400', '0', '0', '50', '0'],
+                ['1400', (document.documentElement.clientHeight - 700).toString(), '0', '50', '700'],
+               ];
 set_finish();
 set_blocks();
 function getRandom(min, max) {
@@ -30,7 +47,7 @@ function check_colision() {
         let link = document.createElement('A');
         label.innerHTML = "YOU WIN!";
         link.innerHTML = "to the next level";
-        link.setAttribute('href', '../levelThird/index.html');
+        link.setAttribute('href', '../finish/index.html');
         document.body.removeChild(document.body.querySelector('#playField'))
         result.appendChild(label);
         result.appendChild(link);
