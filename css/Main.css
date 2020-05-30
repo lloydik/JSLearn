@@ -50,8 +50,8 @@ body {
 
 .topNubex {
     position: fixed;
-    right: 5px;
-    bottom: 25px;
+    right: -20%;
+    bottom: -20%;
     background-color: orange;
     color: white;
     border-radius: 50px;
@@ -448,6 +448,9 @@ a {
     margin: auto;
 }
 @media(min-width:768px) and (max-width:1024px) {
+    #JSP {
+        font-size: 200px;
+    }
     .text_in_main {
         font-size: 42px;
     }
@@ -476,6 +479,10 @@ a {
 }
 
 @media(min-width:500px) and (max-width:830px) {
+    
+    #JSP {
+        font-size: 100px;
+    }
     #menu {
         height: 80px;
     }
@@ -490,8 +497,9 @@ a {
         width: 30px;
         height: 30px;
     }
-    
-    
+    #JSP {
+        font-size: 75px;
+    }
     .first_block {
         height: 50vh;
     }

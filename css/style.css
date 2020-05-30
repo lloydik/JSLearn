@@ -482,8 +482,8 @@ footer{
 }
 .topNubex {
     position: fixed;
-    right: 5px;
-    bottom: 25px;
+    right: -20%;
+    bottom: -20%;
     background-color: orange;
     color: white;
     border-radius: 50px;
