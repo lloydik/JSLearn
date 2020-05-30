@@ -7,12 +7,11 @@
             ['<img src="../img/js-logo%20(1).png">'],
             ['Введение. addEventListener. innerHTML'],
             ['classList. Условный оператор'],
-            [''],
             [`<h3>Попасть на уровень</h3>
             <div class="form-row">
                 <input type="text" id="pass" required autocomplete="off"><label for="pass">Флаг</label>
             </div>
-            <p><input type="submit" value="Войти" id="ent"></p>`],
+            <p><input type="button" value="Войти" id="ent"></p>`],
         ];
 
         let mainEn = [
@@ -21,12 +20,11 @@
             ['<img src="../img/js-logo%20(1).png">'],
             ['Introduction. addEventListener. innerHTML'],
             ['classList. condition operator'],
-            [''],
             [`<h3>Get to level</h3>
             <div class="form-row">
                 <input type="text" id="pass" required autocomplete="off"><label for="pass">Flag</label>
             </div>
-            <p><input type="submit" value="Enter" id="ent"></p>`],
+            <p><input type="button" value="Enter" id="ent"></p>`],
         ];
         let menuEn= ['Learn', '<img class="home" src="../img/JS-logo.png">','About', ''];
         let menuRu= ['Изучить', '<img class="home" src="../img/JS-logo.png">','О проекте', ''];

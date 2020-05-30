@@ -163,7 +163,8 @@ let mainRu = [`
 <span class="keyword">&#60;/html&#62;</span>
 </code>
         </pre>
-        <p>Развлекайся :)</p>` ];
+        <p>Развлекайся :)</p>
+        <a href="#" title="Вернуться к началу страницы" class="topNubex"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>` ];
 let mainEn = [
 `<p>Hello! Welcome to second lesson of JavaScript. Today we will talk about classes in css and condition operator</p>
         <p>Firstly let's talk about classes. We can add and remove classes on elements. The classList property is responsible for this. classList - essentially an array in each element that stores classes. What can do classList? classList can</p>
@@ -322,7 +323,8 @@ let mainEn = [
 <span class="keyword">&#60;/html&#62;</span>
 </code>
         </pre>
-        <p>Have fun with this knowledge :)</p>`
+        <p>Have fun with this knowledge :)</p>
+        <a href="#" title="Вернуться к началу страницы" class="topNubex"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>`
         ];
 
 let RuPage = [menuRu, headerRu, mainRu, footerRu];
@@ -330,10 +332,9 @@ let EnPage = [menuEn, headerEn, mainEn, footerEn];
 
 let en = false;
 let array = document.body.children;
-let count1 = array.length-1;
+let count1 = array.length-2;
 
 function setContent() {
-    console.log(array);
     if (en) {
         for (let i = 0; i < count1; i++) {
                 array[i].innerHTML = RuPage[i];

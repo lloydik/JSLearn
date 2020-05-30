@@ -156,7 +156,8 @@ let mainRu = [
 <span class="keyword">&#60;/html&#62;</span>
 </code>
         </pre>
-        <p>Также такую прослушку можно ставить на разные теги(div p и т.д.). Например: <span class="attention">divId.addEventListener("click" function(){});</span></p> <p>Поздравляю! Теперь ты можешь создавать веб-кликер! Ты можешь стилизировать игру и сделать более интересной!</p>`
+        <p>Также такую прослушку можно ставить на разные теги(div p и т.д.). Например: <span class="attention">divId.addEventListener("click" function(){});</span></p> <p>Поздравляю! Теперь ты можешь создавать веб-кликер! Ты можешь стилизировать игру и сделать более интересной!</p>
+        <a href="#" title="Вернуться к началу страницы" class="topNubex"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>`
         ];
 let mainEn = [
 `<p>Hello! Welcome to first lesson of JavaScript. lets talk about JavaScript.</p> <p>The first thing I wanted to say is that JavaScript &#8800; Java. Many confuse these two languages and they dont see the difference between them. This is what Java looks like:</p>
@@ -315,7 +316,8 @@ let mainEn = [
 </code>
         </pre>
         <p>Also you can add event listener to other tags(div p etc.). for example: <span class="attention">divId.addEventListener("click" function(){});</span></p>
-        <p>Congrats! Now you create a web-clicker! You can style your game and make her more interesting!</p>`
+        <p>Congrats! Now you create a web-clicker! You can style your game and make her more interesting!</p>
+        <a href="#" title="Вернуться к началу страницы" class="topNubex"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>`
         ];
 let menuEn = ["<a href='../index.html'>Learn</a><a href='../index.html'><img class='home' src='../../img/JS-logo.png'></a><a href='../../about.html'>About</a> <img id='switchLanguage' src='../../img/SLRussia.png'>"];
 let menuRu = ["<a href='../index.html'>Изучить</a><a href='../index.html'><img class='home' src='../../img/JS-logo.png'></a><a href='../../about.html'>О проекте</a><img id='switchLanguage' src='../../img/SLRussia.png'>"];
@@ -328,7 +330,7 @@ let EnPage = [menuEn, headerEn, mainEn, footerEn];
 
 let en = false;
 let array = document.body.children;
-let count1 = array.length-1;
+let count1 = array.length-3;
 
 function setContent() {
     console.log(array);
