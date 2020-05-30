@@ -7,6 +7,8 @@
     <title>JS Learn</title>
     <link rel="stylesheet" href="css/Main.css">
     <link rel="shortcut icon" href="img/JS-logo.png" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
 </head>
 
 <body>
@@ -15,7 +17,6 @@
         <div class="logo"></div>
         <p>JavaScript <br> Learn</p>
     </header>
-    <!--Play in Ping pong -> https://lloydik.github.io/JSLearn/pinpong.html -->
     <div id="menu">
         <a href="learn/index.html">Learn</a>
         <a href="index.html"><img class='home' src='img/JS-logo.png'></a>
@@ -23,9 +24,25 @@
         <img id='switchLanguage' src='img/SLRussia.png'>
     </div>
 
-    <main>
+    <main> 
+        <div class="first_block">
+            <div class="image_main"></div>
+            <div class="text_main">
+                <h1 class="text_in_main">
+                    «JAVASCRIPT
+                    <h1 class="text_in_main">
+                        LEARN» FANTASY </h1>
+                    <h1 class="text_in_main">
+                        WORLD </h1>
+                </h1>
+            </div>
+        </div>
         <h1>Welcome!</h1>
-        <p>Welcome to JSLearn! In this course you can learn JS for Web. With this knowledge you can edit, add, remove and do more intresting things with HTML. JavaScript is one of the most popular programming language. All interactive that you saw in different sites - it is JavaScript.</p>
+        <div class="second_block">
+            <div class="text_main_second">
+                <p>Welcome to JSLearn! In this course you can learn JS for Web. With this knowledge you can edit, add, remove and do more intresting things with HTML. JavaScript is one of the most popular programming language. All interactive that you saw in different sites - it is JavaScript.</p>
+            </div>
+        </div>
 
         <div id="good">
             <img src="img/html.png">
@@ -39,94 +56,127 @@
 
         <p><img src="img/ESMA.png" class='float_right'>Supports object-oriented, imperative and functional styles. It is an implementation of the ECMAScript standard. JavaScript is commonly used as an embedded language for programmatically accessing application objects. It is most widely used in browsers as a scripting language for giving interactivity to web pages. JavaScript was influenced by many languages; during development, the goal was to make the language look like Java, but easy for people without programming experience. JavaScript is not spoken by any company or organization, which distinguishes it from a number of programming languages used in web development</p>
         <p>After this course you will be able to create interactive sites to your taste and color. I hope I can teach you JavaScript. Good luck :)</p>
+    <a href="#" title="Вернуться к началу страницы" class="topNubex"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
     </main>
 
     <footer><a href = "https://informatics.ru/">Glazyrin Artem, Kukin Maxim</a> <a href = "https://informatics.ru/"><img src ='img/Logo.svg'></a></footer>
 
     <script>
         'use strict';
-        
-        
+
+
         let timeoutId;
         let timeHelloId1;
         let intervalId;
-        
+
         let JsPanel = document.createElement('DIV');
         JsPanel.setAttribute('id', 'panel');
-        
+
         let JsBall = document.createElement('DIV');
         JsBall.setAttribute('id', 'ball');
-        
-        
+
+
         let JSP = document.createElement('P');
         JSP.setAttribute('id', 'JSP');
         JSP.innerHTML = "JSLEARN";
-        
+
         function show_p() {
             JSP.style.opacity = "1";
         }
-        
+
         JsPanel.appendChild(JsBall);
         JsPanel.appendChild(JSP);
         document.body.appendChild(JsPanel);
-        
+
         let xP = JSP.getBoundingClientRect().left;
         let yP = JSP.getBoundingClientRect().top;
+
         function changeBallPosition() {
             ball.classList.remove('down');
             ball.classList.add('up');
-            
-            setTimeout(function(){
+
+            setTimeout(function() {
                 ball.classList.remove('up');
                 ball.classList.add('down');
-                setTimeout(function(){
+                setTimeout(function() {
                     ball.classList.remove('down');
                     ball.classList.add('up');
                     ball.style.opacity = "0";
                     show_p();
                 }, 300);
             }, 300);
-            
-            
+
+
         }
-        
-        timeHelloId1 = setTimeout(function(){
+
+        timeHelloId1 = setTimeout(function() {
             changeBallPosition();
         }, 1000);
-        
+
         timeoutId = setTimeout(function() {
             clearInterval(intervalId);
             JsPanel.remove();
         }, 5000);
-        
-        
-        
-        
+
+
+
+
         let headerRu = ['&nbsp;'];
         let headerEn = ['&nbsp;'];
         let mainRu = [
+            [`<div class="image_main"></div>
+            <div class="text_main">
+                <h1 class="text_in_main">
+                    «JAVASCRIPT
+                    <h1 class="text_in_main">
+                        LEARN» И МИР </h1>
+                    <h1 class="text_in_main">
+                        ТВОРЧЕСКИХ </h1>
+                    <h1 class="text_in_main">
+                        ФАНТАЗИЙ</h1>
+                </h1>
+            </div>`],
             ['Добро Пожаловать!'],
-            ['<img src="" class="float_left">Добро Пожаловать на JSLearn! На этом курсе ты сможешь изучить JS для веба. С этими знаниями ты сможешь изменять, создавать, удалять и делать более интересные вещи с HTML. JavaSript один из самых популярных языгов программирования. Весь интерактив, который ты видел на сайтах - это всё JavaSript.'],
+            
+            
+            [`<div class="image_main_second"></div>
+            <div class="text_main_second">
+                <p>Добро Пожаловать на JSLearn! На этом курсе ты сможешь изучить JS для веба. С этими знаниями ты сможешь изменять, создавать, удалять и делать более интересные вещи с HTML. JavaSript один из самых популярных языгов программирования. Весь интерактив, который ты видел на сайтах - это всё JavaSript.</p>
+            </div>`],
             ['<div id="good"> <img src="img/html.png"> <p class="big">+</p>  <img src="img/css3.svg"> <p class="big">+</p> <img src="img/js-logo%20(1).png"> <p class="big">=</p> <img src="img/good.gif"> </div>'],
             ['<img src="img/ESMA.png" class="float_right">Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией стандарта ECMAScript. JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам. На JavaScript оказали влияние многие языки, при разработке была цель сделать язык похожим на Java, но при этом лёгким для использования Людям без опыта программирования. Языком JavaScript не владеет какая-либо компания или организация, что отличает его от ряда языков программирования, используемых в веб-разработке'],
-
             ['После этого курса ты сможешь создавать свои собственные интерактивные сайты на свой вкус и цвет. Я надеюсь, что я смогу вас научить JavaSript. Удачи в обучении :)'],
+            ['<i class="fa fa-arrow-up" aria-hidden="true"></i>'],
         ];
 
         let mainEn = [
+            [`<div class="image_main"></div>
+            <div class="text_main">
+                <h1 class="text_in_main">
+                    «JAVASCRIPT
+                    <h1 class="text_in_main">
+                        LEARN» FANTASY  </h1>
+                    <h1 class="text_in_main">
+                        WORLD </h1>
+                </h1>
+            </div>`],
             ['Welcome!'],
-            ['Welcome to JSLearn! In this course you can learn JS for Web. With this knowledge you can edit, add, remove and do more intresting things with HTML. JavaScript is one of the most popular programming language. All interactive that you saw in different sites - it is JavaScript.'],
+            [`<div class="image_main_second"></div>
+            <div class="text_main_second">
+                <p>Welcome to JSLearn! In this course you can learn JS for Web. With this knowledge you can edit, add, remove and do more intresting things with HTML. JavaScript is one of the most popular programming language. All interactive that you saw in different sites - it is JavaScript.</p>
+            </div>`],
             ['<div id="good"> <img src="img/html.png"> <p class="big">+</p>  <img src="img/css3.svg"> <p class="big">+</p> <img src="img/js-logo%20(1).png"> <p class="big">=</p> <img src="img/good.gif"> </div>'],
             ['<img src="img/ESMA.png" class="float_right">Supports object-oriented, imperative and functional styles. It is an implementation of the ECMAScript standard. JavaScript is commonly used as an embedded language for programmatically accessing application objects. It is most widely used in browsers as a scripting language for giving interactivity to web pages. JavaScript was influenced by many languages; during development, the goal was to make the language look like Java, but easy for people without programming experience. JavaScript is not spoken by any company or organization, which distinguishes it from a number of programming languages used in web development'],
             ['After this course you will be able to create interactive sites to your taste and color. I hope I can teach you JavaScript. Good luck :)'],
+            ['<i class="fa fa-arrow-up" aria-hidden="true"></i>'],
         ];
-        let menuEn= ['Learn', '<img class="home" src="img/JS-logo.png">','About', ''];
-        let menuRu= ['Изучить', '<img class="home" src="img/JS-logo.png">','О проекте', ''];
-        let footerRu= ['Глазырин Артём, Кукин Максим', '<a href = "https://informatics.ru/"><img src ="img/Logo.svg"></a>'];
-        let footerEn= ['Glazyrin Artem, Kukin Maxim', '<a href = "https://informatics.ru/"><img src ="img/Logo.svg"></a>'];
-        
-        
-        
+        let menuEn = ['Learn', '<img class="home" src="img/JS-logo.png">', 'About', ''];
+        let menuRu = ['Изучить', '<img class="home" src="img/JS-logo.png">', 'О проекте', ''];
+        let footerRu = ['Глазырин Артём, Кукин Максим', '<a href = "https://informatics.ru/"><img src ="img/Logo.svg"></a>'];
+        let footerEn = ['Glazyrin Artem, Kukin Maxim', '<a href = "https://informatics.ru/"><img src ="img/Logo.svg"></a>'];
+
+
+
         let RuPage = [];
         RuPage.push(headerRu);
         RuPage.push(menuRu);
@@ -138,9 +188,10 @@
         EnPage.push(mainEn);
         EnPage.push(footerEn);
         let en = true;
+
         function setContent() {
             let array = document.body.children;
-            let count1 = array.length;
+            let count1 = array.length - 3;
             if (en) {
                 for (let i = 1; i < count1; i++) {
                     let count2 = array[i].childElementCount;
@@ -163,7 +214,24 @@
         switchLanguage.addEventListener('click', function() {
             setContent();
         });
-
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        'use strict';
+        $(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() != 0) {
+                    $('#topNubex').fadeIn();
+                } else {
+                    $('#topNubex').fadeOut();
+                }
+            });
+            $('#topNubex').click(function() {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 700);
+            });
+        });
     </script>
 </body>
 
