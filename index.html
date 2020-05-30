@@ -214,6 +214,23 @@
         switchLanguage.addEventListener('click', function() {
             setContent();
         });
+        
+        
+        
+        document.addEventListener('scroll', function(){
+            if (document.body.querySelector('.first_block').getBoundingClientRect().top < 0)
+            {
+                document.body.querySelector('.topNubex').style.bottom = '25px';
+                document.body.querySelector('.topNubex').style.right = '5px';
+                document.body.querySelector('.topNubex').style.opacity = '1';
+            }
+            else
+            {
+                document.body.querySelector('.topNubex').style.opacity = '0';
+                document.body.querySelector('.topNubex').style.bottom = '-20%';
+                document.body.querySelector('.topNubex').style.right = '-20%';
+            }
+        });
     </script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript">
