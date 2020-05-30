@@ -114,12 +114,13 @@ body{
     margin:0;
     font-family: 'Roboto', sans-serif;
 }
-#menu{
+#menu {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
+    vertical-align: middle;
     align-items: center;
     background-color: #f7df1d;
-    height: 190px;
+    height: 100px;
     width: 100%;
     z-index: 20;
     position: sticky;
@@ -167,8 +168,9 @@ footer{
 
 @media(min-width:1280px)
 {
-    .home{
-        height: 180px;
+    
+    .home {
+        height: 90px;
     }
     header{
         font-size: 72px;
@@ -214,9 +216,10 @@ footer{
     #menu > a{
         font-size: 28px;
     }
-    .home{
-        height: 90px;
+    .home {
+        height: 45px;
     }
+
     header{
         font-size: 72px;
     }
@@ -254,13 +257,13 @@ footer{
     footer img{
         width: 100px;
     }
-    #menu{
+    #menu {
         height: 100px;
     }
 }
 @media(max-width:1024px)
 {
-    .home{
+    .home {
         height: 90px;
     }
     header{
@@ -317,11 +320,11 @@ footer{
     }
 }
 @media(min-width:830px) and (max-width:1024px){
-    #menu{
+    #menu {
         height: 100px;
     }
-    .home{
-        height: 90px;
+    .home {
+        height: 45px;
     }
 }
 @media(min-width:768px) and (max-width:1024px){
@@ -345,10 +348,10 @@ footer{
     }
 }
 @media(min-width:500px) and (max-width:830px){
-    #menu{
+    #menu {
         height: 80px;
     }
-    .home{
+    .home {
         height: 50px;
     }
     .code{
@@ -359,11 +362,11 @@ footer{
     }
 }
 @media(max-width:500px){
-    #menu{
-        height: 50px;
+    #menu {
+        height: 100px;
     }
-    .home{
-        height: 50px;
+    .home {
+        height: 35px;
     }
     main h1{
         font-size: 30px;
@@ -406,4 +409,110 @@ footer{
     #menu > a{
         font-size: 10px;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {box-sizing: border-box;}
+.ui-form {
+  max-width: 350px;
+  padding: 80px 30px 30px;
+  margin: 50px auto 30px;
+  background: white;
+}
+.ui-form h3 {
+  position: relative;
+  z-index: 5;
+  margin: 0 0 60px;
+  text-align: center;
+  color: #4a90e2;
+  font-size: 30px;
+  font-weight: normal;
+}
+.ui-form h3:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 60px;
+  top: -30px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fee8e4;
+}
+.ui-form h3:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 50px;
+  top: -40px;
+  width: 0;
+  height: 0;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  border-bottom: 90px solid #ffe3b5;
+}
+.form-row {
+  position: relative;
+  margin-bottom: 40px;
+}
+.form-row input {
+  display: block;
+  width: 100%;
+  padding: 0 10px;
+  line-height: 40px;
+  font-family: 'Roboto', sans-serif;
+  background: none;
+  border-width: 0;
+  border-bottom: 2px solid #4a90e2;
+  transition: all 0.2s ease;
+}
+.form-row label {
+  position: absolute;
+  left: 13px;
+  color: #9d959d;
+  font-size: 20px;
+  font-weight: 300;
+  transform: translateY(-35px);
+  transition: all 0.2s ease;
+}
+.form-row input:focus {
+  outline: 0;
+  border-color: #F77A52;
+}
+.form-row input:focus + label, 
+.form-row input:valid + label {
+  transform: translateY(-60px);
+  margin-left: -14px;
+  font-size: 14px;
+  font-weight: 400;
+  outline: 0;
+  border-color: #F77A52;
+  color: #F77A52;
+}
+.ui-form input[type="button"] {
+  width: 100%;
+  padding: 0;
+  line-height: 42px;
+  background: #4a90e2;
+  border-width: 0;
+  color: white;
+  font-size: 20px;
+}
+.ui-form p {
+  margin: 0;
+  padding-top: 10px;
 }

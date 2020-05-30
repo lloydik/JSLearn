@@ -8,7 +8,11 @@
             ['Введение. addEventListener. innerHTML'],
             ['classList. Условный оператор'],
             [''],
-            ['К секретному уровню'],
+            [`<h3>Попасть на уровень</h3>
+            <div class="form-row">
+                <input type="text" id="pass" required autocomplete="off"><label for="pass">Флаг</label>
+            </div>
+            <p><input type="submit" value="Войти" id="ent"></p>`],
         ];
 
         let mainEn = [
@@ -18,7 +22,11 @@
             ['Introduction. addEventListener. innerHTML'],
             ['classList. condition operator'],
             [''],
-            ['To secret level'],
+            [`<h3>Get to level</h3>
+            <div class="form-row">
+                <input type="text" id="pass" required autocomplete="off"><label for="pass">Flag</label>
+            </div>
+            <p><input type="submit" value="Enter" id="ent"></p>`],
         ];
         let menuEn= ['Learn', '<img class="home" src="../img/JS-logo.png">','About', ''];
         let menuRu= ['Изучить', '<img class="home" src="../img/JS-logo.png">','О проекте', ''];
@@ -70,11 +78,11 @@ let footerEn= ['Glazyrin Artem, Kukin Maxim', '<a href = "https://informatics.ru
 
 
 
-document.querySelector('main > button').addEventListener('click', function(){
+document.querySelector('#ent').addEventListener('click', function(){
     if (document.body.querySelector('main').lastElementChild.tagName == 'A')
         document.body.querySelector('main').removeChild(document.body.querySelector('main').lastElementChild);
     let a = document.createElement('A');
-    if (secretField.value == 'flag{JS_i5_C0o1}')
+    if (pass.value == 'flag{JS_i5_C0o1}')
         {
             a.innerHTML = 'g0!';
             a.setAttribute('href', 'game/level1/index.html');
