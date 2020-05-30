@@ -151,11 +151,20 @@ a{
 }
 @media(max-width:1024px)
 {
+    .ContentContainer{
+        flex-direction: column;
+    }
+    .circle{
+        opacity: 0;
+    }
     .home{
         height: 45px;
     }
     main {
         font-size:16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     #menu > a{
         font-size: 20px;
@@ -186,6 +195,15 @@ a{
     }
 }
 @media(min-width:500px) and (max-width:830px){
+    
+    .container > p{
+        padding: 0;
+        font-size: 16px;
+    }
+    .container{
+        margin: auto;
+        width: 80%;
+    }
     #menu {
         height: 80px;
     }
@@ -194,6 +212,15 @@ a{
     }
 }
 @media(max-width:500px){
+    
+    .container{
+        margin: auto;
+        width: 80%;
+    }
+    .container > p{
+        padding: 0;
+        font-size: 16px;
+    }
     a{
         font-size: 16px;
     }

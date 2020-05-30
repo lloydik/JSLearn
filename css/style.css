@@ -381,7 +381,7 @@ footer{
     #switchLanguage{
         position: absolute;
         border: none;
-        right: 0;
+        right: 20%;
         bottom: 0;
     }
 }
