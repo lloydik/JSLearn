@@ -29,10 +29,11 @@
     background-color: rgba(255, 255, 255, 1);
     overflow: hidden;
     z-index: 100;
-    text-align: left;
+    text-align:justify;
 }
 .container > p{
-    padding: 20px;
+    padding: 40px;
+    font-size: 24px;
 }
 .circle{
     top: -100%;
@@ -63,15 +64,15 @@ footer{
     align-items: center;
     display: flex;
 }
-#menu{
+#menu {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     vertical-align: middle;
     align-items: center;
     background-color: #f7df1d;
-    height: 190px;
+    height: 100px;
     width: 100%;
-    z-index: 1000;
+    z-index: 2000;
     position: sticky;
     top: 0;
 }
@@ -89,7 +90,7 @@ a{
 @media(min-width:1280px)
 {
     .home{
-        height: 180px;
+        height: 90px;
     }
     header{
         font-size: 72px;
@@ -138,7 +139,7 @@ a{
     footer img{
         width: 100px;
     }
-    #menu{
+    #menu {
         height: 100px;
     }
     #switchLanguage{
@@ -151,7 +152,7 @@ a{
 @media(max-width:1024px)
 {
     .home{
-        height: 90px;
+        height: 45px;
     }
     main {
         font-size:16px;
@@ -167,14 +168,15 @@ a{
     }
     footer{
         font-size: 25px;
+        margin-top: 150px;
     }
 }
 @media(min-width:830px) and (max-width:1024px){
-    #menu{
+    #menu {
         height: 100px;
     }
     .home{
-        height: 90px;
+        height: 50px;
     }
 }
 @media(min-width:768px) and (max-width:1024px){
@@ -184,18 +186,18 @@ a{
     }
 }
 @media(min-width:500px) and (max-width:830px){
-    #menu{
+    #menu {
         height: 80px;
     }
     .home{
-        height: 50px;
+        height: 40px;
     }
 }
 @media(max-width:500px){
     a{
         font-size: 16px;
     }
-    #menu{
+    #menu {
         height: 100px;
     }
     .home{
